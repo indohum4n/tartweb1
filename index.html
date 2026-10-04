@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kue Tart Turen — Tart Buatan Tangan, Tiap Hari Baru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="loader-circle"></div>
+  <p class="loader-text">Menyiapkan Oven...</p>
+</div>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <a href="#beranda" class="logo" aria-label="Kue Tart Turen">
+    <span class="logo-mark" aria-hidden="true"></span>
+    <span>Kue Tart Turen<small>sejak 2019</small></span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#koleksi">Koleksi</a>
+    <a href="#lokasi">Lokasi</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+  <a href="#kontak" class="btn-cta">
+    <span>Pesan Sekarang</span>
+    <span class="arrow">→</span>
+  </a>
+  <div class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="beranda">
+  <!-- <img class="hero-photo" id="heroPhoto" src="/tartweb1/asset/tartheroc2.jpeg" alt="Kue Tart Turen"> -->
+     <picture>
+    <!-- Jika layar lebih dari 920px (Desktop), pakai tartheroc1.jpeg -->
+    <source media="(min-width: 921px)" srcset="/tartweb1/asset/tartheroc1.webp">
+    <!-- Default untuk HP & Tablet (di bawah 921px), pakai tartheroc2.jpeg -->
+    <img class="hero-photo" id="heroPhoto" src="/tartweb1/asset/tartheroc2.webp" alt="Kue Tart Turen">
+  </picture>
+  <div class="hero-veil"></div>
+  <div class="hero-content">
+    <div class="hero-tag reveal"><span class="dot"></span> Menerima pesanan</div>
+    <h1 class="reveal">Kue Tart buatan tangan, <em>Fresh</em> dan Mantul.</h1>
+    <p class="hero-sub reveal">Kue Tart Turen sudah berdiri dengan resep rumahan yang konsisten sejak 2019. Dengan rasa coklat yang melekat dan harga yang terjangkau — Tanpa pengawet, tanpa coloring berlebihan.</p>
+    <div class="hero-actions reveal">
+      <a href="#koleksi" class="btn-primary">Lihat Koleksi <span class="arrow">→</span></a>
+      <a href="#lokasi" class="btn-ghost">Lokasi Kami</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <span><b>9</b>varian tart</span>
+    <span><b>2 jam</b>lead time</span>
+    <span><b>4.9★</b>rating pelanggan</span>
+  </div>
+</section>
+
+<!-- KOLEKSI -->
+<section class="koleksi" id="koleksi">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Koleksi Tart</div>
+        <h2 class="section-title">Sembilan tart pilihan, <em>satu oven</em> yang sama tiap pagi.</h2>
+      </div>
+      <p>Pilih ukuran diameter 18 cm untuk 6–8 porsi, atau 22 cm untuk acara kumpul keluarga. Semua bisa request ukiran nama dan tema tanpa biaya tambahan.</p>
+    </div>
+
+    <div class="mosaic reveal" id="mosaic">
+      <div class="tile size-big">
+        <div class="tile-badge">Best seller</div>
+        <img src="https://picsum.photos/seed/tart-coklat-klasik/800/800" alt="Tart Coklat Klasik">
+        <div class="tile-info">
+          <h3>Tart Coklat Klasik</h3>
+          <p class="price">Rp 280.000 · 22 cm</p>
+          <p class="desc">Coklat Belgia 64%, krim mentega ringan, dua lapis spons coklat.</p>
+        </div>
+      </div>
+      <div class="tile size-tall">
+        <img src="https://picsum.photos/seed/tart-strawberry-cream/600/800" alt="Strawberry Shortcake">
+        <div class="tile-info">
+          <h3>Strawberry Shortcake</h3>
+          <p class="price">Rp 245.000</p>
+          <p class="desc">Spons vanila, krim diplomat, strawberry segar.</p>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://picsum.photos/seed/tart-matcha-uzuki/500/500" alt="Matcha Uzuki">
+        <div class="tile-info">
+          <h3>Matcha Uzuki</h3>
+          <p class="price">Rp 265.000</p>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://picsum.photos/seed/tart-lemon-meringue/500/500" alt="Lemon Meringue">
+        <div class="tile-info">
+          <h3>Lemon Meringue</h3>
+          <p class="price">Rp 230.000</p>
+        </div>
+      </div>
+      <div class="tile size-wide">
+        <img src="https://picsum.photos/seed/tart-tiramisu-rum/900/450" alt="Tiramisu Rum">
+        <div class="tile-info">
+          <h3>Tiramisu Rum</h3>
+          <p class="price">Rp 295.000 · 22 cm</p>
+          <p class="desc">Mascarpone, kopi espresso, ladyfinger, sentuhan rum.</p>
+        </div>
+      </div>
+      <div class="tile size-tall">
+        <div class="tile-badge">Baru</div>
+        <img src="https://picsum.photos/seed/tart-red-velvet-bean/600/800" alt="Red Velvet">
+        <div class="tile-info">
+          <h3>Red Velvet</h3>
+          <p class="price">Rp 275.000</p>
+          <p class="desc">Coklat merah, krim keju, krumble kacang.</p>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://picsum.photos/seed/tart-blackforest-cherry/500/500" alt="Black Forest">
+        <div class="tile-info">
+          <h3>Black Forest</h3>
+          <p class="price">Rp 285.000</p>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="https://picsum.photos/seed/tart-blueberry-yogurt/500/500" alt="Blueberry Yogurt">
+        <div class="tile-info">
+          <h3>Blueberry Yogurt</h3>
+          <p class="price">Rp 250.000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="koleksi-foot reveal">
+      <p>Pesanan custom di atas 2 kg atau bentuk karakter silakan konsultasi 3 hari sebelumnya — kapasitas oven terbatas.</p>
+      <a href="#kontak" class="btn-ghost">Konsultasi pesanan →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LOKASI -->
+<section class="lokasi" id="lokasi">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Lokasi & Akses</div>
+        <h2 class="section-title">Di arah selatan pertigaan tugu, <em>seberang</em> bengkel sepeda.</h2>
+      </div>
+      <p>Toko kami buka setiap hari. Dari jam 8 pagi hingga jam 10 malam.</p>
+    </div>
+
+    <div class="lokasi-wrap reveal">
+           <!-- MAP GOOGLE EMBED -->
+      <div class="map-card">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1974.6518699689689!2d112.70474465391311!3d-8.172123708389917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd61f5e01db86ab%3A0x867a70ca818c56b8!2sKue%20tart%20turen!5e0!3m2!1sen!2sid!4v1791032159980!5m2!1sen!2sid"
+          style="border:0; width: 100%; height: 100%; position: absolute; inset: 0; min-height: 520px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- INFO -->
+      <div class="lokasi-info">
+        <div class="info-row">
+          <div class="label">Alamat lengkap</div>
+          <h4>Jl. Kh Wahid Hasyim No. 4</h4>
+          <p>Kel. Turen, Kec. Turen, Kabupaten Malang 65175 — Toko putih, Banner merah bertuliskan " kue Tart Turen".</p>
+        </div>
+
+        <div class="info-row">
+          <div class="label">Jam operasional</div>
+          <h4>Setiap hari · 08.00 – 22.00</h4>
+          <p>Buka setiap hari — jadwal dapat berubah sewaktu-waktu.</p>
+          <div class="pill-row">
+            <span class="pill">Delivery-Order</span>
+            <span class="pill">Walk-in welcome</span>
+            <span class="pill">Pre-order pickup</span>
+            <span class="pill">Gojek instant</span>
+          </div>
+        </div>
+
+        <div class="directions">
+          <h4>Rute tercepat dari Pasar Turen</h4>
+          <div class="dir-step"><span class="dir-num">1</span><span>Keluar arah timur perempatan Pasar Turen, ambil Jl. A. Yani.</span></div>
+          <div class="dir-step"><span class="dir-num">2</span><span>Lurus terus 1,5 km.</span></div>
+          <div class="dir-step"><span class="dir-num">3</span><span>Mentok pertigaan, belok kanan 80 m.</span></div>
+          <div class="dir-step"><span class="dir-num">4</span><span>Toko kami di sisi kanan, persis didepan bengkel sepeda.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="tentang">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="about-visual reveal">
+        <img src="https://picsum.photos/seed/tart-turen-pemilik/800/1000" alt="Proses dekorasi tart di dapur Kue Tart Turen">
+        <div class="about-stamp">Dapur · 05.30 WIB</div>
+      </div>
+      <div class="about-text reveal">
+        <div class="eyebrow">Tentang Kami</div>
+        <h2 class="section-title">Dimulai dari <em>Satu Oven</em>.</h2>
+        <p class="lead" style="margin-top:1.8rem">Mamaby (bu Debby) mulai menjual kue tart dari dapur rumah pada 2019 — pesanan pertamanya adalah satu buah Kue Tart untuk ulang tahun anak teman dekatnya.</p>
+        <p>selama 5+ tahun, Harga selalu ramah kantong. Kami masih memakai resep terbaik, telur ayam kampung dari para peternak lokal, dan tanpa pengawet tambahan.</p>
+        <p>Kami juga menawarkan layanan kustom yang dapat disesuaikan dengan kebutuhan Anda. Dan kami selalu memberikan konsultasi terbaik secara gratis bagi para pelanggan.</p>
+
+        <div class="stats">
+          <div class="stat"><b>5+</b><span>tahun berjalan</span></div>
+          <div class="stat"><b>9</b><span>varian tetap</span></div>
+          <div class="stat"><b>0</b><span>pengawet tambahan</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section class="kontak" id="kontak">
+  <div class="container">
+    <div class="kontak-wrap">
+      <div class="kontak-left reveal">
+        <div class="eyebrow">Pesan Sekarang</div>
+        <h2 class="section-title">Kami <em>Selalu</em> menanti pesanan Anda.</h2>
+        <p>Isi form di samping atau hubungi langsung lewat kanal di bawah. Untuk pesanan besar di atas 5 kg atau bentuk custom, hubungi minimal H-3 sebelum pengambilan.</p>
+
+        <div class="contact-channels">
+          <a class="channel" href="https://wa.me/6285100404106">
+            <div class="channel-ic"><img src="asset/wa.svg" alt=""></div>
+            <div class="channel-info"><b>WhatsApp</b><span>+62 851-0040-4106 · respons tercepat</span></div>
+          </a>
+          <a class="channel" href="https://www.tiktok.com/@kuetartturen">
+            <div class="channel-ic"><img src="asset/tt.svg" alt=""></div>
+            <div class="channel-info"><b>TikTok</b><span>@kuetartturen · lihat koleksi terbaru</span></div>
+          </a>
+          <a class="channel" href="https://www.facebook.com/galangstmj.galangstmj.9">
+            <div class="channel-ic"><img src="asset/fb.svg" alt=""></div>
+            <div class="channel-info"><b>Facebook</b><span>Kue Tart Turen · lihat koleksi lainnya</span></div>
+          </a>
+        </div>
+      </div>
+
+           <!-- KARTU AKSI CEPAT -->
+      <div class="form reveal quick-action">
+        <h3>Langsung chat aja</h3>
+        <p class="form-sub">Pilih varian di bawah, lalu klik tombol WhatsApp. Kami bantu proses sisanya.</p>
+
+        <div class="quick-options">
+          <label class="quick-pill">
+            <input type="radio" name="quicktart" value="Coklat Klasik" checked>
+            <span>Coklat Klasik</span>
+          </label>
+          <label class="quick-pill">
+            <input type="radio" name="quicktart" value="Strawberry Shortcake">
+            <span>Strawberry</span>
+          </label>
+          <label class="quick-pill">
+            <input type="radio" name="quicktart" value="Red Velvet">
+            <span>Red Velvet</span>
+          </label>
+          <label class="quick-pill">
+            <input type="radio" name="quicktart" value="Black Forest">
+            <span>Black Forest</span>
+          </label>
+          <label class="quick-pill">
+            <input type="radio" name="quicktart" value="Lainnya / Custom">
+            <span>Lainnya / Custom</span>
+          </label>
+        </div>
+
+        <a href="#" id="waQuickLink" class="form-submit" style="text-align:center; text-decoration:none; display:block;">
+          Pesan via WhatsApp <span style="display:inline-block; transition:transform .4s;">→</span>
+        </a>
+        <a href="https://instagram.com/kuetartturen" class="btn-ghost" style="margin-top:1rem; width:100%; text-align:center; display:block; border:1px solid var(--line); padding:1rem; border-radius:999px;">
+          Lihat Katalog di Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-wrap">
+    <small>© 2026 Kue Tart Turen · Jl. Kh Wahid Hasyim No. 4, Malang</small>
+    <div class="foot-links">
+      <a href="#koleksi">Koleksi</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="#kontak">Kontak</a>
+      <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ===== PRELOADER HIDE ON LOAD ===== */
+  window.addEventListener('load', function(){
+    const preloader = document.getElementById('preloader');
+    if(preloader){
+      setTimeout(()=>{
+        preloader.classList.add('hide');
+        // Mulai animasi hero setelah preloader hilang
+        const heroPhoto = document.getElementById('heroPhoto');
+        if(heroPhoto) heroPhoto.classList.add('in');
+      }, 300);
+    }
+  });
+
+  /* ===== REVEAL ON SCROLL ===== */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* ===== NAV SCROLL ===== */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY > 30) nav.classList.add('scrolled'); 
+    else nav.classList.remove('scrolled');
+  },{passive:true});
+
+  /* ===== MOBILE MENU ===== */
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click',()=>{
+    burger.classList.toggle('open');
+    navLinks.classList.toggle('mobile');
+  });
+  navLinks.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      burger.classList.remove('open');
+      navLinks.classList.remove('mobile');
+    });
+  });
+
+  /* ===== QUICK WHATSAPP LINK ===== */
+  const waLink = document.getElementById('waQuickLink');
+  const waRadio = document.querySelectorAll('input[name="quicktart"]');
+  
+  function updateWaLink() {
+    let selectedTart = "Kue Tart Turen";
+    waRadio.forEach(r => {
+      if (r.checked) selectedTart = r.value;
+    });
+    const msg = `Halo Kue Tart Turen, saya tertarik memesan tart *${selectedTart}*. Bisa dibantu untuk proses pemesanannya?`;
+    waLink.href = 'https://wa.me/6281234567890?text=' + encodeURIComponent(msg);
+  }
+  if(waLink) {
+    updateWaLink();
+    waRadio.forEach(r => r.addEventListener('change', updateWaLink));
+  }
+
+  /* ===== OPTIMIZED HERO PARALLAX (RAF) ===== */
+  if(!reduce && window.matchMedia('(pointer:fine)').matches){
+    const heroPhoto = document.getElementById('heroPhoto');
+    let ticking = false;
+    
+    if(heroPhoto){
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const y = window.scrollY;
+            if(y < window.innerHeight){
+              heroPhoto.style.transform = `scale(1) translateY(${y*0.15}px)`;
+              heroPhoto.style.opacity = Math.max(0, 1 - y/(window.innerHeight*0.9));
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, {passive:true});
+    }
+  }
+})();
+</script>
+</body>
+</html>
