@@ -69,7 +69,7 @@
   }
   .nav.scrolled{padding:.75rem 2rem;background:rgba(220,238,245,.95)}
   .logo{display:flex;align-items:center;gap:.6rem;font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;letter-spacing:-.02em}
-  .logo-mark{
+  /* .logo-mark{
     width:36px;height:36px;border-radius:50%;
     background:var(--ink);
     display:flex;align-items:center;justify-content:center;
@@ -83,8 +83,9 @@
   .logo-mark::after{
     content:"";position:absolute;top:3px;left:50%;transform:translateX(-50%);
     width:2px;height:6px;background:var(--ink);border-radius:2px;
-  }
-  .logo:hover .logo-mark{transform:rotate(-12deg) scale(1.08)}
+  } */
+  .logo-img{width:36px;height:auto;transition: transform .5s var(--ease-e);}
+  .logo:hover .logo-img{transform:rotate(-12deg) scale(1.08)}
   .logo span small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-top:-2px}
 
   .nav-links{display:flex;align-items:center;gap:2.2rem}
@@ -549,6 +550,7 @@
   .quick-pill input{
     position:absolute; opacity:0; pointer-events:none;
   }
+
   .quick-pill span{
     display:inline-block;
     padding:.6rem 1.1rem;
@@ -567,6 +569,72 @@
     background:var(--ink);
     color:#fff;
     border-color:var(--ink);
+  }
+
+    /* ============ FLOATING SHAPES & WA LOGO ============ */
+  .quick-action{
+    position:relative;
+    overflow:hidden; /* agar shape tidak keluar kotak */
+    transition:transform .4s var(--ease-e), box-shadow .4s var(--ease-e);
+  }
+  /* Efek hover pada kartu */
+  .quick-action:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px -15px rgba(10,37,64,.2);
+  }
+  /* Pastikan teks dan tombol berada di atas shape */
+  .quick-action h3, 
+  .quick-action p, 
+  .quick-options, 
+  .quick-action a {
+    position:relative;
+    z-index:2;
+  }
+
+  /* Logo WA */
+  .wa-logo{
+    width:56px; height:56px;
+    background:#25D366; /* Warna hijau WhatsApp */
+    color:#fff;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 1.5rem;
+    position:relative; z-index:2;
+    box-shadow:0 10px 20px -5px rgba(37, 211, 102, 0.4);
+    transition:transform .4s var(--ease-e);
+  }
+  /* Efek hover pada logo */
+  .quick-action:hover .wa-logo{
+    transform:scale(1.1) rotate(-5deg);
+  }
+
+  /* Animasi Shapes Mengambang */
+  .float-bg{
+    position:absolute; top:0; left:0; right:0; bottom:0;
+    z-index:1;
+    pointer-events:none; /* agar tidak mengganggu klik tombol */
+  }
+  .shape{
+    position:absolute;
+    opacity:0;
+    animation:floatUp 8s linear infinite;
+  }
+  .shape.s1 { left:10%; bottom:-20px; width:12px; height:12px; background:var(--accent); border-radius:50%; animation-duration:7s; }
+  .shape.s2 { left:80%; bottom:-20px; width:16px; height:16px; background:#F5D8C8; border-radius:4px; animation-duration:9s; animation-delay:1s; transform:rotate(45deg); }
+  .shape.s3 { left:30%; bottom:-20px; width:8px; height:8px; background:var(--accent-deep); border-radius:50%; animation-duration:6s; animation-delay:2s; }
+  .shape.s4 { left:60%; bottom:-20px; width:10px; height:10px; background:var(--ink-soft); border-radius:2px; animation-duration:10s; animation-delay:0.5s; }
+  .shape.s5 { left:45%; bottom:-20px; width:14px; height:14px; border:2px solid var(--accent); border-radius:50%; animation-duration:8s; animation-delay:1.5s; }
+
+  @keyframes floatUp {
+    0% { transform:translateY(0) rotate(0deg); opacity:0; }
+    15% { opacity:0.5; }
+    80% { opacity:0.3; }
+    100% { transform:translateY(-450px) rotate(360deg); opacity:0; }
+  }
+
+  /* Matikan animasi jika user reduce-motion */
+  @media (prefers-reduced-motion:reduce){
+    .shape { animation:none; display:none; }
   }
 
   /* ============ FOOTER ============ */
