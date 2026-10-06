@@ -266,7 +266,7 @@
     transform:translateY(0);
     transition:padding .5s var(--ease-e);
   }
-  .tile-info h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;letter-spacing:-.01em;margin-bottom:.25rem}
+  .tile-info h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;letter-spacing:-.01em;margin-bottom:.25rem}
   .tile-info .price{font-size:.78rem;opacity:.85;letter-spacing:.04em}
   .tile-info .desc{
     font-size:.82rem;opacity:0;max-height:0;
