@@ -84,4 +84,58 @@
       }, {passive:true});
     }
   }
+
+    /* ===== MODAL POPUP IMAGE ===== */
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImage');
+  const modalCaption = document.getElementById('modalCaption');
+  const modalClose = document.getElementById('modalClose');
+
+  // Buat semua tile bisa diklik
+  document.querySelectorAll('.tile').forEach(tile => {
+    tile.style.cursor = 'pointer';
+    tile.addEventListener('click', function() {
+      const thumbImg = this.querySelector('img');
+      if(!thumbImg) return;
+      
+      // Ambil nama file dari src thumbnail (misal: tartguyur.webp -> tartguyur)
+      const fileName = thumbImg.src.split('/').pop().split('.')[0];
+      
+      // Buat path gambar real di folder asset/real
+      const realSrc = `asset/real/${fileName}.jpeg`;
+      
+            const title = this.querySelector('h2') ? this.querySelector('h2').innerText : '';
+      const desc = this.querySelector('.desc') ? this.querySelector('.desc').innerText : '';
+      const badge = this.querySelector('.tile-badge');
+      
+      // Cek apakah kartu memiliki badge
+      let badgeHtml = '';
+      if(badge) {
+        badgeHtml = `<span class="modal-badge">${badge.innerText}</span>`;
+      }
+      
+      modalImg.src = realSrc;
+      modalCaption.innerHTML = `${badgeHtml}<h4>${title}</h4><p>${desc}</p>`;
+      
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // cegah scroll background
+    });
+  });
+
+  function closeModal() {
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+    // Kosongkan src setelah modal tutup agar tidak membebani memori
+    setTimeout(() => { modalImg.src = ''; }, 400);
+  }
+
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  if(modal) modal.addEventListener('click', function(e) {
+    if(e.target === modal) closeModal();
+  });
+  // Tutup modal dengan tombol ESC di keyboard
+  document.addEventListener('keydown', function(e) {
+    if(e.key === 'Escape' && modal.classList.contains('show')) closeModal();
+  });
+
 })();

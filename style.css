@@ -664,6 +664,83 @@
   .foot-links a{transition:color .3s var(--ease-q)}
   .foot-links a:hover{color:var(--ink)}
 
+    /* ============ MODAL POPUP IMAGE ============ */
+  .modal-overlay{
+    position:fixed; inset:0; z-index:9998;
+    background:rgba(10,37,64,.85);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    display:flex; align-items:center; justify-content:center;
+    padding:2rem;
+    opacity:0; visibility:hidden;
+    transition:opacity .4s var(--ease-e), visibility .4s var(--ease-e);
+  }
+  .modal-overlay.show{
+    opacity:1; visibility:visible;
+  }
+  .modal-content{
+    position:relative;
+    max-width:800px; width:100%;
+    background:var(--surface);
+    border-radius:18px;
+    overflow:hidden;
+    transform:scale(0.9) translateY(20px);
+    transition:transform .5s var(--ease-e);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.5);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-overlay.show .modal-content{
+    transform:scale(1) translateY(0);
+  }
+  .modal-content img{
+    width:100%; 
+    height:auto; 
+    max-height:60vh; /* Turunkan dari 80vh ke 60vh agar teks di bawahnya tidak terdesk */
+    object-fit:contain; 
+    background:var(--bg-2); 
+    display:block;
+  }
+  .modal-caption{
+    padding:1.5rem 2rem;
+    overflow-y:auto;
+  }
+  .modal-caption h4{
+    font-family:'Fraunces',serif; font-weight:500; font-size:1.5rem; margin-bottom:.5rem; color:var(--ink);
+  }
+  .modal-caption p{
+    color:var(--ink-soft); font-size:.95rem; line-height:1.6;
+  }
+
+  .modal-badge {
+    display: inline-block;
+    padding: .35rem .85rem;
+    border-radius: 999px;
+    background: var(--accent-deep);
+    color: #fff;
+    font-size: .65rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .modal-close{
+    position:absolute; top:1rem; right:1rem;
+    width:40px; height:40px; border-radius:50%;
+    background:rgba(255,255,255,.95);
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; font-size:1.1rem; color:var(--ink);
+    transition:transform .3s var(--ease-e);
+    z-index:5;
+    border: 1px solid var(--line-soft);
+  }
+  .modal-close:hover{
+    transform:rotate(90deg) scale(1.1);
+    background: var(--ink);
+    color: #fff;
+  }
+
   /* ============ RESPONSIVE ============ */
   @media (max-width:920px){
     .nav-links{display:none}
