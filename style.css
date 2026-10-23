@@ -178,11 +178,12 @@
     width:fit-content;
     
     /* Efek kaca & fading langsung di elemen h1 */
+/*     
     background:rgba(255, 255, 255, 0.45);
     border-radius:12px;
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
-    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.55);
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.55); */
   }
 
   .hero h1 em{font-style:italic;font-weight:500;color:var(--accent-deep)}
